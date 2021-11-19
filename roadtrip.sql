@@ -141,6 +141,8 @@ CREATE TABLE `itinerary` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   `user_id` int NOT NULL,
+  `date_debut` datetime DEFAULT NULL,
+  `date_fin` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_itinerary_user1_idx` (`user_id`),
   CONSTRAINT `fk_itinerary_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
@@ -303,4 +305,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-15  9:55:28
+-- Dump completed on 2021-11-19 15:20:35
