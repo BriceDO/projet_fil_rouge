@@ -11,12 +11,7 @@ public class UserService {
 	
 	
 	public void createUser(User user) {
-					
-			
 		this.userRepository.createUser();
-		
-		
-		
 		}
 
 
