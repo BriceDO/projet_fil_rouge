@@ -1,16 +1,18 @@
-package entities;
+package model;
 
-public class UserModel {
+public class User {
 	//Attribut
 	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
+	private Boolean isAdmin;
+
 	
 	//Constructeur
 
-	public UserModel() {
+	public User() {
 		
 	}
 
@@ -20,15 +22,37 @@ public class UserModel {
 	 * @param firstName
 	 * @param lastName
 	 * @param email
-	 * @parma password
+	 * @param password
 	 */
-	public UserModel(int id ,String firstName,String lastName,  String email,String password) {
+	
+	
+	
+	public User(int id ,String firstName,String lastName,  String email,String password) {
 		super();
 		this.id = id;
-		this.lastName = lastName;
+		this.setLastName(lastName);
+		this.setFirstName(firstName);
+		this.setEmail(email);
+		this.setPassword(password);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	public User(int id, String firstName, String lastName, String email, String password, Boolean isAdmin) {
+		super();
+		this.id = id;
 		this.firstName = firstName;
+		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+		this.isAdmin = isAdmin;
 	}
 
 	//Getters setter
@@ -71,11 +95,25 @@ public class UserModel {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	
+	
+	
+	
+	
 	//ToString
+
+	public Boolean getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 
 	@Override
 	public String toString() {
-		return "UserModel [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
 				+ email + ", password=" + password + "]";
 	}
 
